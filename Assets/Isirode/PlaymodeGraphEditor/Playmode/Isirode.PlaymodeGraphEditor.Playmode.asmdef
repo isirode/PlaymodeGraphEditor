@@ -1,0 +1,17 @@
+{
+    "name": "PlaymodeGraphEditor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:b89efa8692c5ddd45ad9bdd0f4c1e76b",
+        "GUID:a442653617f4e874aaf0d10860c4fc28"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

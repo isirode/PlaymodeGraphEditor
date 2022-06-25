@@ -43,10 +43,18 @@ The features are split by responsability.
   - [ ] Duplicate a node
   - [ ] Select multiple nodes
   - [ ] Drag multiple nodes
+  
+- [ ] Subgraph
+- [ ] Recursivity
+  - [ ] Detect recursivity
+  - [ ] Block recursivity
+  - [ ] Allow recursivity (with a control node)
 
 ### Code quality
 
 - [ ] Split the BaseNode file and add regions
+- [ ] Add the namespaces
+- [x] Add an assembly definition
 
 ## Publishing
 

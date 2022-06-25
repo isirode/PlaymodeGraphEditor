@@ -1,0 +1,17 @@
+.example_container {
+    width: 50%;
+    height: 10%;
+    /* This is imported from the default theme of the Select */
+    background-color: var(--fourth-darkest-color);
+}
+
+.example_select {
+    overflow: visible;/* important */
+    margin-top: 5px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    width: 100%;
+    flex-direction: Row;
+    display: flex;
+}

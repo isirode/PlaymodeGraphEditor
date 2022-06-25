@@ -1,0 +1,23 @@
+
+#Canvas {
+    /*
+	border-width: 1px;
+	border-color: red;
+	*/
+}
+
+#unity-content-container {
+    /*
+	border-width: 1px;
+	border-color: blue;
+	background-color: yellow;
+	*/
+}
+
+#Fitter {
+    /*
+	border-width: 1px;
+	border-color: green;
+	*/
+}
+

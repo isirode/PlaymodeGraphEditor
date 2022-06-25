@@ -1,0 +1,73 @@
+/* Match https://www.w3schools.com/colors/colors_picker.asp grey color */
+:root {
+    --darkest-color: #4d4d4d;
+    --second-darkest-color: #666666;
+    --third-darkest-color: #808080;
+    --fourth-darkest-color: #999999;
+    --fifth-darkest-color: #b3b3b3;
+    --whitest-color: #cccccc;
+}
+
+/* Region : Select */
+
+.select_label {
+    color: var(--darkest-color);
+}
+
+.select_selection_label {
+    background-color: var(--third-darkest-color);
+    border-width: 1px;
+    border-color: var(--darkest-color);
+    border-radius: 10px;
+    padding: 2px;
+}
+
+.select_selection_label:hover {
+    background-color: var(--whitest-color);
+}
+
+.select_options_container {
+    border-width: 1px;
+    border-color: rgb(76, 76, 76);
+    padding: 1px;
+    background-color: var(--third-darkest-color);
+}
+
+.select_option {
+    border-radius: 10px;
+    background-color: var(--third-darkest-color);
+    border-width: 1px;
+    border-color: var(--darkest-color);
+}
+
+.select_option:hover {
+    background-color: rgb(225, 236, 249);
+}
+
+/* Region : Menu */
+
+.menu {
+    border-color: rgb(172, 175, 174);
+    border-width: 1px;
+}
+
+.menu_node {
+    background-color: rgb(56, 56, 56);
+    color: rgb(248, 247, 247);
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.menu_node:hover {
+    background-color: #c4c4c4;
+}

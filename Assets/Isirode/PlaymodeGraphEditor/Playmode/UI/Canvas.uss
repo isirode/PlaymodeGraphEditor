@@ -1,0 +1,106 @@
+.container {
+    flex-grow: 1;
+    width: auto;
+    height: auto;
+    max-width: none;
+    max-height: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.canvas {
+    flex-grow: 1;
+    max-width: 75%;
+    max-height: 75%;
+    width: 75%;
+    height: 75%;
+}
+
+#unity-content-and-vertical-scroll-container {
+	/* 
+		Info : We need to set the png to Cursor in the properties before using it 
+		Otherwise, the error 'Failed to set the cursor because the specified texture was not CPU accessible' will appear
+		From here https://www.flaticon.com/free-icon/pointer_7686046?term=mouse%20cursor%20forbidden&page=1&position=16&page=1&position=16&related_id=7686046&origin=style
+	*/
+    /* Info : this path do not work */
+	/*cursor: url("Assets/Isirode/PlaymodeGraphEditor/Assets/Textures/pointer.png");*/
+    /* Info : this is working */
+    cursor: url("../../Assets/Textures/pointer.png");
+}
+
+/* FIXME : I am not sure if this is usefull */
+#unity-content-container {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+#unity-low-button {
+    background-color: rgb(147, 160, 156);
+    border-radius: 5px;
+    border-color: rgb(96, 107, 103);
+    border-width: 2px;
+    -unity-background-image-tint-color: green;
+}
+
+#unity-high-button {
+    background-color: rgb(147, 160, 156);
+    border-radius: 5px;
+    border-color: rgb(96, 107, 103);
+    border-width: 2px;
+    -unity-background-image-tint-color: green;
+}
+
+#unity-drag-container {
+    border-radius: 5px;
+    border-width: 0;
+    border-color: rgb(96, 107, 103);
+    padding: 0;
+    margin: 0;
+}
+
+#unity-tracker {
+    border-radius: 5px;
+    border-width: 1px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#unity-dragger-border {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#unity-dragger {
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: rgb(96, 107, 103);
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0 0 0 0;
+}
+
+#Fitter {
+    flex-grow: 1;
+    transform-origin: left bottom;
+    display: flex;
+    background-color: var(--even-darker-color-override);
+	width: 2000px;
+	height: 2000px;
+	min-height: 2000px;
+    /* Unlike Unity's documentation indicate, we cannot use text, but arrow is ok here ... only resources ; we cannot use .cur also */
+	cursor: Arrow;
+    /* TODO : implement the repeat texture once Unity support it https://forum.unity.com/threads/background-repeat.707150/
+    /*
+    background-image: resource('Textures/background');
+    */
+}
+

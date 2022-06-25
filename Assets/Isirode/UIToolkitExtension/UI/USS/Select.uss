@@ -1,0 +1,27 @@
+
+.select_label {
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: auto;
+    min-width: auto;
+}
+
+.select_selection_container {
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: auto;
+    min-width: auto;
+    overflow: visible;
+}
+
+.select_option {
+    width: auto;
+    margin: 0;
+}
+
+/* This is the way to reference a unity icon */
+/*
+.test {
+    background-image: url('project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=4456449167576933126&guid=0cd6bb01b34b4c840b7a66c4008fb3a9&type=3#dropdown-arrow@2x');
+}
+*/

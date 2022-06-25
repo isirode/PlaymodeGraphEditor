@@ -1,0 +1,6 @@
+.example_container {
+    width: 75%;
+    height: 75%;
+    /* This is imported from the default theme of the Select */
+    background-color: var(--fourth-darkest-color);
+}

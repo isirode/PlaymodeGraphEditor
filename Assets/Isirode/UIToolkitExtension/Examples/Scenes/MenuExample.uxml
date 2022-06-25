@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Isirode/UIToolkitExtension/Examples/Scenes/MenuExampleUSS.uss?fileID=7433441132597879392&amp;guid=05242a2c3e88cb047ad004a7934ef435&amp;type=3#MenuExampleUSS" />
+    <Style src="project://database/Assets/Isirode/UIToolkitExtension/UI/USS/MenuNode.uss?fileID=7433441132597879392&amp;guid=006f943acff6fcf48b309c5f981bb5b8&amp;type=3#MenuNode" />
+    <Style src="project://database/Assets/Isirode/UIToolkitExtension/UI/USS/ColorTheme.uss?fileID=7433441132597879392&amp;guid=7dcd1da97c1b1e84f8ca107932e46152&amp;type=3#ColorTheme" />
+    <ui:VisualElement name="Container" class="example_container" />
+    <ui:VisualElement name="Menu" class="menu" />
+</ui:UXML>

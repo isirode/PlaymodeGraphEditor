@@ -1,0 +1,193 @@
+/* Match https://www.w3schools.com/colors/colors_picker.asp grey color */
+/* We are force to set an override because Unity do not seem to be resetting former value I had setup with newest values */
+:root {
+    --even-darker-color-override: ##333333;
+    --darkest-color-override: #4d4d4d;
+    --second-darkest-color-override: #666666;
+    --third-darkest-color-override: #808080;
+    --fourth-darkest-color-override: #999999;
+    --fifth-darkest-color-override: #b3b3b3;
+    --whitest-color-override: #cccccc;
+    --even-whiter-color-override: #e6e6e6;
+}
+
+.node {
+    border-width: 2px;
+    border-color: black;
+    border-radius: 5px;
+    background-color: var(--second-darkest-color-override);
+    min-width: 350px;
+}
+
+.node_title {
+    border-bottom-width: 2px;
+    border-color: black;
+    -unity-text-align: middle-center;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    background-color: var(--second-darkest-color-override);
+}
+
+.node_label {
+    color: var(--even-whiter-color-override);
+}
+
+.node_container {
+    flex-grow: 1;
+    width: auto;
+    height: auto;
+    flex-direction: row;
+    padding: 0;
+}
+
+.node_input_container {
+    flex-grow: 1;
+    flex-direction: column;
+    /*min-width: 50%;*/
+    border-right-width: 1px;
+    border-right-color: black;
+    background-color: var(--second-darkest-color-override);
+}
+
+.node_output_container {
+    flex-grow: 1;
+    flex-direction: column;
+    /*min-width: 50%;*/
+    border-left-width: 1px;
+    border-left-color: black;
+    background-color: var(--even-darker-color-override);
+}
+
+.node_value_row_container {
+    /*flex-direction: row;*/
+    padding: 3px;
+    /* This allow to put items in the middle / bottom / top of the row */
+    align-items: center;
+}
+
+.node_input_row_container {
+    flex-direction: row;
+}
+
+.node_output_row_container {
+    /*width: 100%;*/
+    width: auto;
+    /*justify-content: flex-end;*//* FIXME : this is important to align outputs to the right ? */
+    flex-direction: row-reverse;
+}
+
+.node_input_knob {
+    /* Note : not implemented by Unity */
+    /*flex-order: 10;*/
+    /* Info : this put the outer element to the top / right */
+    align-items: center;
+}
+
+.node_output_knob {
+    /* Info : this put the outer element to the end */
+    align-items: center;
+    /* Info : this does not take in consideration the fix pixel width of the outer element */
+    /*flex-basis: content; or flex-basis: 0;*/
+}
+
+.knob_outer_element {
+    /* Info : not working */
+    /*transform-origin: right;
+    right: 0;*/
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    min-height: 20px;
+    border-width: 4px;
+    border-color: blue;
+    border-radius: 30px;
+    background-color: var(--even-darker-color-override);
+}
+
+/* TODO : do something good with the interaction of the Knobs, use pivot center and flex center */
+/*
+.knob_inner_element {
+    background-color: white;
+    width: 50%;
+    height: 50%;
+    border-radius: 30px;
+    top:25%;
+    left: 25%;
+}
+*/
+
+.node_output_knob {
+    flex-grow: 1;
+}
+
+.node_output_label {
+    flex-grow: 13;
+}
+
+/*
+.node_input_knob {
+    flex-grow: 1;
+}
+
+.node_input_label {
+    flex-grow: 13;
+}
+*/
+
+.node_input_label {
+    -unity-text-align: upper-left;
+    flex-grow: 3;
+    margin: 0;
+    padding: 0;
+    color: var(--whitest-color-override);
+}
+
+.node_output_label {
+    /* -unity-text-align is not displayed in the unity editor, but seem to work */
+    -unity-text-align: upper-right;
+    /*height: 100%;*/
+    margin: 0;
+    padding: 0;
+}
+
+/* Note : we cannot use different color for different border size */
+.node .select_label {
+    border-color: var(--fifth-darkest-color-override);
+    border-bottom-color: var(--darkest-color-override);
+    /* Info : linear-gradient is not implemented in Unity */
+    /*background-color: linear-gradient(red, yellow);*/
+    background-color: var(--third-darkest-color-override);
+    border-radius: 3px;
+}
+
+.node_input_select .select_label {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 0;
+}
+
+#AbsoluteParent .select_option {
+    border-width: 0;
+    padding: 3px;
+    border-bottom-width: 1px;
+    border-bottom-color: var(--third-darkest-color-override);
+    border-radius: 1px;
+    border-color: var(--darkest-color-override);
+}
+
+.node_output_select .select_label {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: 0;
+}
+
+.node .node_textfield .unity-text-field__input {
+    margin: 0;
+    padding: 0;
+    border-radius: 3px;
+    min-width: 50px;
+    min-height: 25px;
+    background-color: var(--darkest-color-override);
+    color: var(--even-whiter-color-override);
+}

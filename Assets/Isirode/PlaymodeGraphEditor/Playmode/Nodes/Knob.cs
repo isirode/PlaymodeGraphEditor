@@ -1,25 +1,28 @@
 ﻿using UnityEngine.UIElements;
 
-public class Knob : VisualElement
+namespace Isirode.PlaymodeGraphEditor.Playmode.Nodes
 {
-    // Info : We are using a outer element and a inner element so that we can do an interaction visualization
-    // The main component (itself) will have it width affecter by the flex layout so we cannot use it for that
-    public VisualElement OuterElement { get; set; }
-    public VisualElement InnnerElement { get; set; }
-
-    public Knob()
+    public class Knob : VisualElement
     {
-        OuterElement = new VisualElement();
-        OuterElement.AddToClassList("knob_outer_element");
+        // Info : We are using a outer element and a inner element so that we can do an interaction visualization
+        // The main component (itself) will have it width affecter by the flex layout so we cannot use it for that
+        public VisualElement OuterElement { get; set; }
+        public VisualElement InnnerElement { get; set; }
 
-        InnnerElement = new VisualElement();
-        InnnerElement.AddToClassList("knob_inner_element");
+        public Knob()
+        {
+            OuterElement = new VisualElement();
+            OuterElement.AddToClassList("knob_outer_element");
 
-        OuterElement.Add(InnnerElement);
-        Add(OuterElement);
+            InnnerElement = new VisualElement();
+            InnnerElement.AddToClassList("knob_inner_element");
+
+            OuterElement.Add(InnnerElement);
+            Add(OuterElement);
+        }
+
+        // TODO : implement the XML instantiation
+
     }
-
-    // TODO : implement the XML instantiation
-
 }
 

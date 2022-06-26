@@ -1,5 +1,5 @@
 {
-    "name": "PlaymodeGraphEditor",
+    "name": "Isirode.PlaymodeGraphEditor.Playmode",
     "rootNamespace": "",
     "references": [
         "GUID:b89efa8692c5ddd45ad9bdd0f4c1e76b",

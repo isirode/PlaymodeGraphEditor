@@ -28,6 +28,7 @@ The features are split by responsability.
   - [ ] Instantiating by C# code
   - [ ] Indicate that a node is selected
   - [ ] Limit the boilerplate by providing a way to access values directly
+  - [ ] Add tooltips
   
 - [ ] Connections
   - [x] Add a connection
@@ -43,6 +44,7 @@ The features are split by responsability.
   - [ ] Duplicate a node
   - [ ] Select multiple nodes
   - [ ] Drag multiple nodes
+  - [ ] Add a legend system
   
 - [ ] Subgraph
 - [ ] Recursivity
@@ -53,8 +55,17 @@ The features are split by responsability.
 ### Code quality
 
 - [ ] Split the BaseNode file and add regions
-- [ ] Add the namespaces
-- [x] Add an assembly definition
+- [ ] Find a way to handle assets correctly
+  - If we ignore the other assets, they will not be included on clone
+  - If we include the other assets, the git versionning become bad and duplicated
+
+### Publishing
+
+- [ ] Find an automation to publish the package
+
+### Tests
+
+- [ ] Add tests
 
 ## Publishing
 

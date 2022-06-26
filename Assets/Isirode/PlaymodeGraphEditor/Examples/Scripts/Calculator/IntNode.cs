@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Isirode.PlaymodeGraphEditor.Playmode.Nodes;
+using System;
 using UnityEngine.UIElements;
 
 public class IntNode : BaseNode, ValueNode, GuidProvider

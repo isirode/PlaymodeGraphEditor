@@ -1,10 +1,13 @@
+using Assets.Isirode.UIToolkitExtension.UI.Elements;
+using Isirode.PlaymodeGraphEditor.Playmode;
+using Isirode.PlaymodeGraphEditor.Playmode.Nodes;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UIElements;
-using static BaseNode;
+using static Isirode.PlaymodeGraphEditor.Playmode.Nodes.BaseNode;
 
 // should not need anything else than the nodes definition and callbacks / connection tree traversal
 

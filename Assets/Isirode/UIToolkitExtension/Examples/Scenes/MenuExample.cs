@@ -1,4 +1,4 @@
-using System.Collections;
+using Assets.Isirode.UIToolkitExtension.UI.Elements;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -18,7 +18,7 @@ public class MenuExample : MonoBehaviour
         root = GetComponent<UIDocument>().rootVisualElement;
         container = root.Query<VisualElement>("Container");
 
-        // FIXME : probably want to instantiated it
+        // FIXME : we probably want to instantiate it
         menu = root.Query<VisualElement>("Menu");
         menu.style.position = Position.Absolute;
         menu.style.visibility = Visibility.Hidden;

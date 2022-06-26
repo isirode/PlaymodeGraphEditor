@@ -1,7 +1,10 @@
 {
-    "name": "Isirode.UIToolkitExtension.UI.Elements",
+    "name": "Isirode.PlaymodeGraphEditor.Examples",
     "rootNamespace": "",
-    "references": [],
+    "references": [
+        "GUID:6c2c16621a03a86439213363608f2403",
+        "GUID:b89efa8692c5ddd45ad9bdd0f4c1e76b"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

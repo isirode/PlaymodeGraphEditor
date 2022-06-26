@@ -7,6 +7,26 @@
     --fifth-darkest-color: #b3b3b3;
     --whitest-color: #cccccc;
 }
+/* Match this https://www.schemecolor.com/silver-shades.php */
+/*
+:root {
+    --darkest-color: #737373;
+    --second-darkest-color: #828282;
+    --third-darkest-color: #A4A4A6;
+    --fourth-darkest-color: #AFAEAD;
+    --fifth-darkest-color: #C3C3C1;
+    --whitest-color: #D8D8D6;
+}
+*/
+/*
+:root {
+    --darkest-color: #D8D8D6;
+    --second-darkest-color: #C3C3C1;
+    --third-darkest-color: #AFAEAD;
+    --fourth-darkest-color: #A4A4A6;
+    --fifth-darkest-color: #828282;
+    --whitest-color: #737373;
+}*/
 
 /* Region : Select */
 

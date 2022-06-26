@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Isirode.PlaymodeGraphEditor.Playmode.Nodes;
+using System;
 
 [Serializable]
 public struct ConnectionDto

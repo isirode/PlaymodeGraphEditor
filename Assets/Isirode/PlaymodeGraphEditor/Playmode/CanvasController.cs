@@ -11,7 +11,7 @@ using static NodeEditorGUI;
 namespace Isirode.PlaymodeGraphEditor.Playmode
 {
 
-    public class CanvasController : MonoBehaviour
+    public class CanvasController
     {
         protected VisualElement root;
         protected VisualElement canvas;
@@ -46,7 +46,7 @@ namespace Isirode.PlaymodeGraphEditor.Playmode
         public List<MenuNode> menuNodes = new List<MenuNode>();
 
         // Input node being cloned
-        public VisualTreeAsset inputAsset;
+        // public VisualTreeAsset inputAsset;
 
         public class Connection
         {
@@ -71,9 +71,13 @@ namespace Isirode.PlaymodeGraphEditor.Playmode
         public bool useFixedColor = false;
         public Color ConnectionsColor = Color.blue;
 
-        public void Init()
+        public CanvasController(VisualElement root)
         {
-            root = GetComponent<UIDocument>().rootVisualElement;
+            this.root = root;
+        }
+
+        public virtual void Init()
+        {
             canvas = root.Query<VisualElement>("Canvas");
             fitter = root.Query<VisualElement>("Fitter");
             scrollView = (ScrollView)root.Query<VisualElement>("ContainerScroll");
@@ -453,7 +457,7 @@ namespace Isirode.PlaymodeGraphEditor.Playmode
         #endregion
 
         // FIXME : put in OnPostRender (not working but recommanded by Unity) ?
-        private void OnGUI()
+        public void OnGUI()
         {
             Rect screenRect = new Rect(0, 0, Screen.width, Screen.height);
             Rect rect = canvas.layout;

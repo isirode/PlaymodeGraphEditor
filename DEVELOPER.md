@@ -45,6 +45,7 @@ The features are split by responsability.
   - [ ] Select multiple nodes
   - [ ] Drag multiple nodes
   - [ ] Add a legend system
+  - [ ] Support undo / redo
   
 - [ ] Subgraph
 - [ ] Recursivity

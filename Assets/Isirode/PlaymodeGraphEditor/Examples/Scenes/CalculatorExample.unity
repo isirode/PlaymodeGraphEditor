@@ -182,20 +182,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1378165465}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 465fe85e5b66e624fa3c3f7fd7731daf, type: 3}
+  m_Script: {fileID: 11500000, guid: e494e8e553851c846a9597a02cf33ea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectExtraRect: {x: 0, y: -5}
-  inputAsset: {fileID: 9197481963319205126, guid: a4591d25024623343a58727ee1f74357,
-    type: 3}
-  scrollDirection: -1
-  manualScroll: {x: 0, y: 0}
-  scrollSpeed: {x: 5, y: 5}
-  scaleDirection: -1
-  scale: {x: 1, y: 1, z: 1}
-  useFixedColor: 0
-  ConnectionsColor: {r: 0.0037221909, g: 0, b: 1, a: 1}
-  isScrolling: 0
 --- !u!1 &1847019561
 GameObject:
   m_ObjectHideFlags: 0

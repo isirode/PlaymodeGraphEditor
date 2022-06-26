@@ -25,9 +25,14 @@ public class CalculatorController : CanvasController
     [NonSerialized]
     private BaseNode selectedNode;
 
-    private void Awake()
+    public CalculatorController(VisualElement root) : base(root)
     {
-        Init();
+
+    }
+
+    public override void Init()
+    {
+        base.Init();
 
         Debug.Log(selectExtraRect);
 
@@ -1091,13 +1096,5 @@ public class CalculatorController : CanvasController
             return Color.green;
         }
         return ConnectionsColor;
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Pause))
-        {
-            UnityEditor.EditorApplication.isPaused = true;
-        }
     }
 }

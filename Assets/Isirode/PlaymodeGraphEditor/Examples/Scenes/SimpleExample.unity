@@ -251,7 +251,7 @@ GameObject:
   m_Component:
   - component: {fileID: 943488800}
   - component: {fileID: 943488799}
-  - component: {fileID: 943488802}
+  - component: {fileID: 943488801}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -291,7 +291,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &943488802
+--- !u!114 &943488801
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -300,21 +300,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 943488798}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 152559642e797af42914ff513ecedb01, type: 3}
+  m_Script: {fileID: 11500000, guid: ad0f34d0c9fcad140802f92200abc800, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectExtraRect: {x: 0, y: -3}
-  inputAsset: {fileID: 9197481963319205126, guid: c3f525ecb4f39494c956500bdbbace64,
-    type: 3}
-  scrollDirection: -1
-  manualScroll: {x: 0, y: 0}
-  scrollSpeed: {x: 2, y: 10}
-  scaleDirection: -1
-  scale: {x: 1, y: 1, z: 1}
-  useFixedColor: 0
-  ConnectionsColor: {r: 0, g: 0, b: 1, a: 1}
-  isScrolling: 0
-  UIDocument: {fileID: 943488799}
 --- !u!1 &1678528776
 GameObject:
   m_ObjectHideFlags: 0

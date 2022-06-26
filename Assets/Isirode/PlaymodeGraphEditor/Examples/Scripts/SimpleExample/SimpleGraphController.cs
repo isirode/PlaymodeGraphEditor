@@ -5,12 +5,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class SimpleController : CanvasController
+public class SimpleGraphController : CanvasController
 {
 
-    private void Awake()
+    public SimpleGraphController(VisualElement root) : base(root)
     {
-        Init();
+
+    }
+
+    public override void Init()
+    {
+        base.Init();
 
         selectExtraRect = new Vector2(0, -3);
 

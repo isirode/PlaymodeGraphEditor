@@ -53,6 +53,10 @@ The features are split by responsability.
   - [ ] Block recursivity
   - [ ] Allow recursivity (with a control node)
 
+- [ ] Editor mode
+  - [ ] Allow to use the graph in Editor mode
+  - [ ] Provide an example of how to use a saved (in Editor mode) graph in Playmode 
+
 ### Design
 
 - [ ] Is ValueType what I want, notably for the output knobs ?

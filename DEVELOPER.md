@@ -30,7 +30,7 @@ The features are split by responsability.
   - [ ] Limit the boilerplate by providing a way to access values directly
   - [ ] Add tooltips
   
-- [ ] Connections
+- [x] Connections
   - [x] Add a connection
   - [x] Remove a connection
   - [x] Provide an example of how to limit the connections to a node
@@ -48,13 +48,15 @@ The features are split by responsability.
   - [ ] Support undo / redo
   
 - [ ] Subgraph
+
 - [ ] Recursivity
   - [ ] Detect recursivity
   - [ ] Block recursivity
   - [ ] Allow recursivity (with a control node)
 
 - [ ] Editor mode
-  - [ ] Allow to use the graph in Editor mode
+  - [x] Allow to use the graph in Editor mode
+    - [ ] Fix the current issues (lines on top of UI)	
   - [ ] Provide an example of how to use a saved (in Editor mode) graph in Playmode 
 
 ### Design
@@ -75,6 +77,7 @@ The features are split by responsability.
 - [ ] Find an automation to publish the package
 - [ ] FIXME : when exporting the package from the 'Isirode' main folder, the ASM definition of Seneral NodeEditorFramework is not included
 	Which cause a lot of problems
+	They are included in other ASM definitions though
 
 ### Tests
 

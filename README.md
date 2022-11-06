@@ -44,6 +44,8 @@ I opened a [thread](https://forum.unity.com/threads/draw-unity-gl-on-top-of-ui-i
 
 I've encounter some issues while exporting the package, sometimes, Unity does not include necessary ASM definitions.
 
+In an EditorWindow, the drag & drop of the line is a little bugged, it will show the line only after a few seconds, the updates are also only done once every few seconds. I am working at fixing these issue.
+
 ## Release Notes
 
 ### 0.0.2

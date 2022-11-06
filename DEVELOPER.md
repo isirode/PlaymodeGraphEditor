@@ -59,6 +59,9 @@ The features are split by responsability.
     - [ ] Fix the current issues (lines on top of UI)	
   - [ ] Provide an example of how to use a saved (in Editor mode) graph in Playmode 
 
+- [ ] Library
+  - [ ] Make the calculator library a supported library instead of an example
+
 ### Design
 
 - [ ] Is ValueType what I want, notably for the output knobs ?

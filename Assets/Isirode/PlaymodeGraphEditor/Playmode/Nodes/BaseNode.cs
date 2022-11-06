@@ -111,6 +111,11 @@ namespace Isirode.PlaymodeGraphEditor.Playmode.Nodes
         }
 
         public string _inputs = string.Empty;
+        /// <summary>
+        /// Allow to pass inputs as a String
+        /// WARN : it was made to be used inside the UI Builder, but due to Unity's limitations, it is not currently used there.<br/>
+        /// Prefer using <see cref="AddInputs(List{InputConfiguration})"/> instead.
+        /// </summary>
         public string Inputs
         {
             get
@@ -321,6 +326,11 @@ namespace Isirode.PlaymodeGraphEditor.Playmode.Nodes
         }
 
         public string _outputs = string.Empty;
+        /// <summary>
+        /// Allow to pass inputs as a String
+        /// WARN : it was made to be used inside the UI Builder, but due to Unity's limitations, it is not currently used there.<br/>
+        /// Prefer using <see cref="AddOutputs(List{OutputConfiguration})"/> instead.
+        /// </summary>
         public string Outputs
         {
             get

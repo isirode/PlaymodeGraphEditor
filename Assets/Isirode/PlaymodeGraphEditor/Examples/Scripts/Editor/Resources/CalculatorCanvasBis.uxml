@@ -1,0 +1,20 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Isirode/PlaymodeGraphEditor/Playmode/UI/Canvas.uss?fileID=7433441132597879392&amp;guid=acbc2a7161e68224cb941d205fcd8691&amp;type=3#Canvas" />
+    <Style src="project://database/Assets/Isirode/PlaymodeGraphEditor/Playmode/Nodes/BaseNode.uss?fileID=7433441132597879392&amp;guid=7340402887d9d2c4a84b79ac587aba26&amp;type=3#BaseNode" />
+    <Style src="project://database/Assets/Isirode/UIToolkitExtension/UI/USS/MenuNode.uss?fileID=7433441132597879392&amp;guid=006f943acff6fcf48b309c5f981bb5b8&amp;type=3#MenuNode" />
+    <Style src="project://database/Assets/Isirode/UIToolkitExtension/UI/USS/Select.uss?fileID=7433441132597879392&amp;guid=fe175062c0388c64c931f1a293cc2fb4&amp;type=3#Select" />
+    <Style src="project://database/Assets/Isirode/UIToolkitExtension/UI/USS/ColorTheme.uss?fileID=7433441132597879392&amp;guid=7dcd1da97c1b1e84f8ca107932e46152&amp;type=3#ColorTheme" />
+    <Style src="project://database/Assets/Isirode/PlaymodeGraphEditor/Examples/Styles/Debug.uss?fileID=7433441132597879392&amp;guid=60efde4dd85d360408c311dccdf942ae&amp;type=3#Debug" />
+    <Style src="project://database/Assets/Isirode/PlaymodeGraphEditor/Examples/Styles/CalculatorStyle.uss?fileID=7433441132597879392&amp;guid=2bb6f0fc77adec54eb29ae9adeaad34a&amp;type=3#CalculatorStyle" />
+    <Style src="project://database/Assets/Isirode/PlaymodeGraphEditor/Examples/Scripts/Editor/Resources/EditorExampleUSS.uss?fileID=7433441132597879392&amp;guid=0fd3b104755177c4cbbe49a249728243&amp;type=3#EditorExampleUSS" />
+    <ui:VisualElement name="Container" class="container" style="background-color: rgba(0, 0, 0, 0);">
+        <ui:VisualElement name="Canvas" class="canvas" style="background-color: rgba(0, 0, 0, 0);">
+            <ui:ScrollView scroll-deceleration-rate="0,135" elasticity="0,1" mode="VerticalAndHorizontal" horizontal-scroller-visibility="Auto" vertical-scroller-visibility="Auto" name="ContainerScroll" horizontal-page-size="-1" class="editor_container_scroll">
+                <ui:VisualElement name="Fitter" class="editor_fitter" />
+            </ui:ScrollView>
+        </ui:VisualElement>
+    </ui:VisualElement>
+    <ui:VisualElement name="Menu" class="menu" style="visibility: visible; border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px;" />
+    <ui:VisualElement name="AbsoluteParent" />
+    <ui:VisualElement name="NodeMenu" class="menu" style="visibility: visible; border-top-left-radius: 3px; border-bottom-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px;" />
+</ui:UXML>

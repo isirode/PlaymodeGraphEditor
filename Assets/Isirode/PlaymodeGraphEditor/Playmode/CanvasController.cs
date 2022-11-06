@@ -127,7 +127,6 @@ namespace Isirode.PlaymodeGraphEditor.Playmode
                 throw new Exception("A visual element named 'AbsoluteParent' is required on top of the root's hierarchy for the Select's of the Nodes to work");
             }
 
-            // containerScroll.contentContainer.RegisterCallback<PointerUpEvent>(ShowMenu);
             TargetToAddElementAndClickOn.RegisterCallback<PointerUpEvent>(ShowMenu);
             TargetToAddElementAndClickOn.RegisterCallback<PointerUpEvent>(StopDraggingLink);
             canvas.RegisterCallback<PointerDownEvent>(StartScrolling);
@@ -144,7 +143,7 @@ namespace Isirode.PlaymodeGraphEditor.Playmode
 
         private void ShowMenu(PointerUpEvent evt)
         {
-            // Debug.Log(nameof(ShowMenu));
+            Debug.Log(nameof(ShowMenu));
 
             if (evt.button != ((int)MouseButton.RightMouse))
             {
@@ -456,18 +455,51 @@ namespace Isirode.PlaymodeGraphEditor.Playmode
 
         #endregion
 
+        public Rect editorWindowRect = default(Rect);
+        public Vector2 editorWindowOffset = new Vector2(0f, 0f);
+        public bool isEditorWindow = false;
+
         // FIXME : put in OnPostRender (not working but recommanded by Unity) ?
         public void OnGUI()
         {
-            Rect screenRect = new Rect(0, 0, Screen.width, Screen.height);
+            // Debug.Log(nameof(OnGUI));
+
+            // Info : for EditorWindow, I tried to take the header heigth in consideration
+            // this is not the source of the bug
+            // Rect screenRect = new Rect(0, 0, Screen.width, Screen.height);//original code
+
+            // Info : Rect is never null
+            Rect screenRect = editorWindowRect != default(Rect) ? editorWindowRect : new Rect(0, 0, Screen.width, Screen.height);
             Rect rect = canvas.layout;
+
+            //Debug.Log(screenRect);
+            //Debug.Log(rect); // width & heigth can be NaN, but idk what it means
 
             // This is restricting the GL drawing, but modify the positions
             GUI.BeginGroup(screenRect);
-            GUILayout.BeginArea(rect);
+            // WARN : this seem useless
+#if UNITY_EDITOR
+            if (isEditorWindow)
+            {
+                UnityEditor.EditorGUILayout.BeginHorizontal();
+                UnityEditor.EditorGUILayout.Space(rect.center.x - screenRect.size.x);
+                UnityEditor.EditorGUILayout.BeginVertical();
+                UnityEditor.EditorGUILayout.Space(rect.center.y - screenRect.size.y);
+            } else
+            {
+                GUILayout.BeginArea(rect);
+            }
+           
+#else
+            GUILayout.BeginArea(rect);// keep this
+#endif
+
+            // TODO : remove it once done with the tests
+            // RTEditorGUI.DrawLine(Vector2.zero, new Vector2(300, 300), Color.red, null, 3);
 
             if (isDraggingLink)
             {
+                Debug.Log($"Mouse position {Event.current.mousePosition}");
                 DrawConnection(Event.current.mousePosition);
             }
 
@@ -475,16 +507,25 @@ namespace Isirode.PlaymodeGraphEditor.Playmode
             {
                 // Info : this is not correctly displayed
                 // var start = connection.start.knob.LocalToWorld(connection.start.knob.layout.center) - canvas.layout.position;
-                var start = connection.start.knob.OuterElement.worldBound.center - canvas.layout.position;
+
+                // Info : canvas.layout.position : in EditorWindow : 0,0 but in play mode : other value
+                // Seem very necessary in both case
+                var start = connection.start.knob.OuterElement.worldBound.center - canvas.layout.position + editorWindowOffset;
                 var startDirection = Vector2.right;
+
+                Debug.Log($"canvas.layout.position : {canvas.layout.position}");
 
                 // Info : this is not correctly displayed
                 // var end = connection.end.knob.LocalToWorld(connection.end.knob.layout.center) - canvas.layout.position;
-                var end = connection.end.knob.OuterElement.worldBound.center - canvas.layout.position;
+                var end = connection.end.knob.OuterElement.worldBound.center - canvas.layout.position + editorWindowOffset;
 
                 // end -= GetScaledMagicOffset();
                 var endDirection = Vector2.left;
 
+                // Warn : Handles is worst
+                // UnityEditor.Handles.color = Color.red;
+                // UnityEditor.Handles.DrawLine(start, end, 3);
+                
                 if (!useFixedColor)
                 {
                     NodeEditorGUI.DrawConnection(start, startDirection, end, endDirection, GetConnectionColor(connection));
@@ -493,9 +534,22 @@ namespace Isirode.PlaymodeGraphEditor.Playmode
                 {
                     NodeEditorGUI.DrawConnection(start, startDirection, end, endDirection, ConnectionsColor);
                 }
+                
             }
 
+#if UNITY_EDITOR
+            if (isEditorWindow)
+            {
+                UnityEditor.EditorGUILayout.EndVertical();
+                UnityEditor.EditorGUILayout.EndHorizontal();
+            } else
+            {
+                GUILayout.EndArea();
+            }
+            
+#else
             GUILayout.EndArea();
+#endif
             GUI.EndGroup();
         }
 
@@ -512,8 +566,9 @@ namespace Isirode.PlaymodeGraphEditor.Playmode
             {
                 position -= GetScaledMagicOffset();// new Vector2(55, 12);
             }*/
-            var position = currentKnobConfiguration.knob.OuterElement.worldBound.center - canvas.layout.position;
-
+            // TODO : mutualize the computations
+            var position = currentKnobConfiguration.knob.OuterElement.worldBound.center - canvas.layout.position + editorWindowOffset;
+            Debug.Log($"Drawing from {position} to {endPos}");
             if (!useFixedColor)
             {
                 // Warn : I wanted to use the OuterElement's border color but Unity return 0, 0, 0 every time & keyword is null (correctly indicated in the Debugger)

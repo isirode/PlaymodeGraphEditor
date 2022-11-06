@@ -1,0 +1,57 @@
+/* This is the top container */
+.container {
+    display: flex;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0);
+    /*
+    border-left-width: 3px;
+    border-right-width: 3px;
+    border-top-width: 3px;
+    border-bottom-width: 3px;
+    */
+}
+
+/* this is the scroll container top container .canvas */
+#Canvas {
+    background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    width: 100%;
+    height: 100%;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.editor_container_scroll {
+    /*
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0);
+    max-width: none;
+    max-height: none;
+    flex-wrap: wrap;
+    transform-origin: left bottom;
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+    */
+}
+
+
+.editor_fitter {
+    /*
+    border-left-width: 4px;
+    border-right-width: 4px;
+    border-top-width: 4px;
+    border-bottom-width: 4px;
+    */
+    background-color: rgba(0, 0, 0, 0);/* do not seem to be applied when using .editor_fitter */
+}
+
+/* using #Fitter to set the background-color since it is more specific */
+#Fitter {
+    background-color: rgba(0, 0, 0, 0);
+    border-width: 1px;
+    border-color: black;
+}

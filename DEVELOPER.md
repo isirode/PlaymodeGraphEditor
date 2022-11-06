@@ -53,6 +53,12 @@ The features are split by responsability.
   - [ ] Block recursivity
   - [ ] Allow recursivity (with a control node)
 
+### Design
+
+- [ ] Is ValueType what I want, notably for the output knobs ?
+  - It is not extensible
+  - The logic checking the values is done with knowledge of the nodes supported types : it does not bring type checking between the connections
+
 ### Code quality
 
 - [ ] Split the BaseNode file and add regions
@@ -63,6 +69,8 @@ The features are split by responsability.
 ### Publishing
 
 - [ ] Find an automation to publish the package
+- [ ] FIXME : when exporting the package from the 'Isirode' main folder, the ASM definition of Seneral NodeEditorFramework is not included
+	Which cause a lot of problems
 
 ### Tests
 

@@ -3,22 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class SimpleGraphBehavior : MonoBehaviour
+public class CalculatorBehaviour : MonoBehaviour
 {
-    private SimpleGraphController simpleController;
+    private CalculatorController calculatorController;
 
     private void Awake()
     {
         var root = GetComponent<UIDocument>().rootVisualElement;
 
-        simpleController = new SimpleGraphController(root);
-        simpleController.Init();
+        calculatorController = new CalculatorController(root);
+        calculatorController.Init();
     }
 
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
@@ -32,6 +32,6 @@ public class SimpleGraphBehavior : MonoBehaviour
 
     void OnGUI()
     {
-        simpleController.OnGUI();
+        calculatorController.OnGUI();
     }
 }
